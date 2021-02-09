@@ -1,0 +1,391 @@
+[{
+    "name": "The Fool",
+    "id": "fool",
+    "img": "images/fool.jpg",
+    "meaning": ""
+}, {
+    "name": "The Magician",
+    "id": "magician",
+    "img": "images/magician.jpg",
+    "meaning": ""
+}, {
+    "name": "The High Priestess",
+    "id": "high-priestess",
+    "img": "images/high-priestess.jpg",
+    "meaning": ""
+}, {
+    "name": "The Empress",
+    "id": "empress",
+    "img": "images/empress.jpg",
+    "meaning": ""
+}, {
+    "name": "The Emperor",
+    "id": "emperor",
+    "img": "images/emperor.jpg",
+    "meaning": ""
+}, {
+    "name": "The Hierophant",
+    "id": "hierophant",
+    "img": "images/hierophant.jpg",
+    "meaning": ""
+}, {
+    "name": "The Lovers",
+    "id": "lovers",
+    "img": "images/lovers.jpg",
+    "meaning": ""
+}, {
+    "name": "The Chariot",
+    "id": "chariot",
+    "img": "images/chariot.jpg",
+    "meaning": ""
+}, {
+    "name": "Strength",
+    "id": "strength",
+    "img": "images/strength.jpg",
+    "meaning": ""
+}, {
+    "name": "The Hermit",
+    "id": "hermit",
+    "img": "images/hermit.jpg",
+    "meaning": ""
+}, {
+    "name": "Wheel of Fortune",
+    "id": "wheeloffortune",
+    "img": "images/wheeloffortune.jpg",
+    "meaning": ""
+}, {
+    "name": "Justice",
+    "id": "justice",
+    "img": "images/justice.jpg",
+    "meaning": ""
+}, {
+    "name": "The Hanged Man",
+    "id": "hangedman",
+    "img": "images/hangedman.jpg",
+    "meaning": ""
+}, {
+    "name": "Death",
+    "id": "death",
+    "img": "images/death.jpg",
+    "meaning": ""
+}, {
+    "name": "Temperance",
+    "id": "temperance",
+    "img": "images/temperance.jpg",
+    "meaning": ""
+}, {
+    "name": "The Devil",
+    "id": "devil",
+    "img": "images/devil.jpg",
+    "meaning": ""
+}, {
+    "name": "The Tower",
+    "id": "tower",
+    "img": "images/tower.jpg",
+    "meaning": ""
+}, {
+    "name": "The Star",
+    "id": "star",
+    "img": "images/star.jpg",
+    "meaning": ""
+}, {
+    "name": "The Moon",
+    "id": "moon",
+    "img": "images/moon.jpg",
+    "meaning": ""
+}, {
+    "name": "The Sun",
+    "id": "sun",
+    "img": "images/sun.jpg",
+    "meaning": ""
+}, {
+    "name": "Judgement",
+    "id": "judgement",
+    "img": "images/judgement.jpg",
+    "meaning": ""
+}, {
+    "name": "The World",
+    "id": "world",
+    "img": "images/world.jpg",
+    "meaning": ""
+}, {
+    "name": "Ace of Cups",
+    "id": "aceofcups",
+    "img": "images/aceofcups.jpg",
+    "meaning": ""
+}, {
+    "name": "Two of Cups",
+    "id": "twoofcups",
+    "img": "images/twoofcups.jpg",
+    "meaning": ""
+}, {
+    "name": "Three of Cups",
+    "id": "threeofcups",
+    "img": "images/threeofcups.jpg",
+    "meaning": ""
+}, {
+    "name": "Four of Cups",
+    "id": "fourofcups",
+    "img": "images/fourofcups.jpg",
+    "meaning": ""
+}, {
+    "name": "Five of Cups",
+    "id": "fiveofcups",
+    "img": "images/fiveofcups.jpg",
+    "meaning": ""
+}, {
+    "name": "Six of Cups",
+    "id": "sixofcups",
+    "img": "images/sixofcups.jpg",
+    "meaning": ""
+}, {
+    "name": "Seven of Cups",
+    "id": "sevenofcups",
+    "img": "images/sevenofcups.jpg",
+    "meaning": ""
+}, {
+    "name": "Eight of Cups",
+    "id": "eightofcups",
+    "img": "images/eightofcups.jpg",
+    "meaning": ""
+}, {
+    "name": "Nine of Cups",
+    "id": "nineofcups",
+    "img": "images/nineofcups.jpg",
+    "meaning": ""
+}, {
+    "name": "Ten of Cups",
+    "id": "tenofcups",
+    "img": "images/tenofcups.jpg",
+    "meaning": ""
+}, {
+    "name": "Page of Cups",
+    "id": "pageofcups",
+    "img": "images/pageofcups.jpg",
+    "meaning": ""
+}, {
+    "name": "Knight of Cups",
+    "id": "knightofcups",
+    "img": "images/knightofcups.jpg",
+    "meaning": ""
+}, {
+    "name": "Queen of Cups",
+    "id": "queenofcups",
+    "img": "images/queenofcups.jpg",
+    "meaning": ""
+}, {
+    "name": "King of Cups",
+    "id": "kingofcups",
+    "img": "images/kingofcups.jpg",
+    "meaning": ""
+}, {
+    "name": "Ace of Swords",
+    "id": "aceofswords",
+    "img": "images/aceofswords.jpg",
+    "meaning": ""
+}, {
+    "name": "Two of Swords",
+    "id": "twoofswords",
+    "img": "images/twoofswords.jpg",
+    "meaning": ""
+}, {
+    "name": "Three of Swords",
+    "id": "threeofswords",
+    "img": "images/threeofswords.jpg",
+    "meaning": ""
+}, {
+    "name": "Four of Swords",
+    "id": "fourofswords",
+    "img": "images/fourofswords.jpg",
+    "meaning": ""
+}, {
+    "name": "Five of Swords",
+    "id": "fiveofswords",
+    "img": "images/fiveofswords.jpg",
+    "meaning": ""
+}, {
+    "name": "Six of Swords",
+    "id": "sixofswords",
+    "img": "images/sixofswords.jpg",
+    "meaning": ""
+}, {
+    "name": "Seven of Swords",
+    "id": "sevenofswords",
+    "img": "images/sevenofswords.jpg",
+    "meaning": ""
+}, {
+    "name": "Eight of Swords",
+    "id": "eightofswords",
+    "img": "images/eightofswords.jpg",
+    "meaning": ""
+}, {
+    "name": "Nine of Swords",
+    "id": "nineofswords",
+    "img": "images/nineofswords.jpg",
+    "meaning": ""
+}, {
+    "name": "Ten of Swords",
+    "id": "tenofswords",
+    "img": "images/tenofswords.jpg",
+    "meaning": ""
+}, {
+    "name": "Page of Swords",
+    "id": "pageofswords",
+    "img": "images/pageofswords.jpg",
+    "meaning": ""
+}, {
+    "name": "Knight of Swords",
+    "id": "knightofswords",
+    "img": "images/knightofswords.jpg",
+    "meaning": ""
+}, {
+    "name": "Queen of Swords",
+    "id": "queenofswords",
+    "img": "images/queenofswords.jpg",
+    "meaning": ""
+}, {
+    "name": "King of Swords",
+    "id": "kingofswords",
+    "img": "images/kingofswords.jpg",
+    "meaning": ""
+}, {
+    "name": "Ace of Pentacles",
+    "id": "aceofpentacles",
+    "img": "images/aceofpentacles.jpg",
+    "meaning": ""
+}, {
+    "name": "Two of Pentacles",
+    "id": "twoofpentacles",
+    "img": "images/twoofpentacles.jpg",
+    "meaning": ""
+}, {
+    "name": "Three of Pentacles",
+    "id": "threeofpentacles",
+    "img": "images/threeofpentacles.jpg",
+    "meaning": ""
+}, {
+    "name": "Four of Pentacles",
+    "id": "fourofpentacles",
+    "img": "images/fourofpentacles.jpg",
+    "meaning": ""
+}, {
+    "name": "Five of Pentacles",
+    "id": "fiveofpentacles",
+    "img": "images/fiveofpentacles.jpg",
+    "meaning": ""
+}, {
+    "name": "Six of Pentacles",
+    "id": "sixofpentacles",
+    "img": "images/sixofpentacles.jpg",
+    "meaning": ""
+}, {
+    "name": "Seven of Pentacles",
+    "id": "sevenofpentacles",
+    "img": "images/sevenofpentacles.jpg",
+    "meaning": ""
+}, {
+    "name": "Eight of Pentacles",
+    "id": "eightofpentacles",
+    "img": "images/eightofpentacles.jpg",
+    "meaning": ""
+}, {
+    "name": "Nine of Pentacles",
+    "id": "nineofpentacles",
+    "img": "images/nineofpentacles.jpg",
+    "meaning": ""
+}, {
+    "name": "Ten of Pentacles",
+    "id": "tenofpentacles",
+    "img": "images/tenofpentacles.jpg",
+    "meaning": ""
+}, {
+    "name": "Page of Pentacles",
+    "id": "pageofpentacles",
+    "img": "images/pageofpentacles.jpg",
+    "meaning": ""
+}, {
+    "name": "Knight of Pentacles",
+    "id": "knightofpentacles",
+    "img": "images/knightofpentacles.jpg",
+    "meaning": ""
+}, {
+    "name": "Queen of Pentacles",
+    "id": "queenofpentacles",
+    "img": "images/queenofpentacles.jpg",
+    "meaning": ""
+}, {
+    "name": "King of Pentacles",
+    "id": "kingofpentacles",
+    "img": "images/kingofpentacles.jpg",
+    "meaning": ""
+}, {
+    "name": "Ace of Wands",
+    "id": "aceofwands",
+    "img": "images/aceofwands.jpg",
+    "meaning": ""
+}, {
+    "name": "Two of Wands",
+    "id": "twoofwands",
+    "img": "images/twoofwands.jpg",
+    "meaning": ""
+}, {
+    "name": "Three of Wands",
+    "id": "threeofwands",
+    "img": "images/threeofwands.jpg",
+    "meaning": ""
+}, {
+    "name": "Four of Wands",
+    "id": "fourofwands",
+    "img": "images/fourofwands.jpg",
+    "meaning": ""
+}, {
+    "name": "Five of Wands",
+    "id": "fiveofwands",
+    "img": "images/fiveofwands.jpg",
+    "meaning": ""
+}, {
+    "name": "Six of Wands",
+    "id": "sixofwands",
+    "img": "images/sixofwands.jpg",
+    "meaning": ""
+}, {
+    "name": "Seven of Wands",
+    "id": "sevenofwands",
+    "img": "images/sevenofwands.jpg",
+    "meaning": ""
+}, {
+    "name": "Eight of Wands",
+    "id": "eightofwands",
+    "img": "images/eightofwands.jpg",
+    "meaning": ""
+}, {
+    "name": "Nine of Wands",
+    "id": "nineofwands",
+    "img": "images/nineofwands.jpg",
+    "meaning": ""
+}, {
+    "name": "Ten of Wands",
+    "id": "tenofwands",
+    "img": "images/tenofwands.jpg",
+    "meaning": ""
+}, {
+    "name": "Page of Wands",
+    "id": "pageofwands",
+    "img": "images/pageofwands.jpg",
+    "meaning": ""
+}, {
+    "name": "Knight of Wands",
+    "id": "knightofwands",
+    "img": "images/knightofwands.jpg",
+    "meaning": ""
+}, {
+    "name": "Queen of Wands",
+    "id": "queenofwands",
+    "img": "images/queenofwands.jpg",
+    "meaning": ""
+}, {
+    "name": "King of Wands",
+    "id": "kingofwands",
+    "img": "images/kingofwands.jpg",
+    "meaning": ""
+}]

@@ -1,0 +1,13 @@
+{
+  "name": "professional-tarot-reading",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierremacedo/professional-tarot-reading.git"
+  },
+  "author": "Pierre Macedo",
+  "license": "Proprietary",
+}

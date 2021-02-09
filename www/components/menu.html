@@ -1,0 +1,28 @@
+
+<!-- Button trigger modal -->
+<span class="techstuff">Tech Stuff House</span><i class="fas fa-bars" style="margin-right: 9px;font-size: 28.5px;" data-toggle="modal" data-target="#menuModal" data-backdrop="static" data-keyboard="false"></i><i id="help" class="fas fa-question-circle" style="font-size: 28.5px;margin-right: 9px;" onclick="showHelp(this.id);"></i><a href="mailto:techstuff@virgopublishers.com" style="color: #ffffff"><i class="far fa-envelope" style="font-size: 28.5px;margin-right: 6px;"></i></a>
+
+<!-- Modal -->
+<div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="color:#000000;" id="menuModalLongTitle">Spread Settings:</h5>
+      </div>
+      <div class="modal-body" style="text-align: left;">
+        <input type="radio" name="select" value="3" checked="checked" onclick="spreadSetting(this.value)"><span style="font-size: 18px;color:#000000;margin-left:3px">Three cards</span><br>
+              <input type="radio" name="select" value="5" onclick="spreadSetting(this.value)"><span style="font-size: 18px;color:#000000;margin-left:3px">Five cards</span> 
+      </div>
+    <div class="modal-header">
+        <h5 class="modal-title" style="color:#000000;" id="menuModalLongTitle">Reversals:</h5>
+      </div>
+      <div class="modal-body" style="text-align: left;">
+        <input type="radio" name="select2" value="no" checked="checked" onclick="reversed(this.value)"><span style="font-size: 18px;color:#000000;margin-left:3px">Don't use reversals</span><br>
+              <input type="radio" name="select2" value="yes" onclick="reversed(this.value)"><span style="font-size: 18px;color:#000000;margin-left:3px">Use reversals</span> 
+      </div>    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
