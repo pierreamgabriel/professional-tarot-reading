@@ -1,48 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        xmlns:gap="http://phonegap.com/ns/1.0"
-        xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.techstuff.professionaltarotreading"
-        version   = "1.0.0">
-
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.techstuff.professionaltarotreading" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Professional Tarot Reading</name>
-    
     <plugin name="cordova-plugin-whitelist" spec="~1.3.4" />
     <plugin name="cordova-plugin-splashscreen" spec="~6.0.0" />
     <preference name="SplashScreen" value="screen" />
     <preference name="ShowSplashScreenSpinner" value="false" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
-    <preference name="stay-in-webview" value="false" /> 
+	<preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="stay-in-webview" value="false" />
     <preference name="AndroidLaunchMode" value="singleTask" />
-    
     <preference name="SplashScreenDelay" value="5000" />
-    <config-file platform="android" parent="/manifest" mode="merge">
-    <application android:theme="@android:style/Theme.Translucent.NoTitleBar"></application>
-    </config-file>
-    
-	<platform name="android">
-    <icon src="res/icon/android/ldpi.png" density="ldpi" />
-    <icon src="res/icon/android/mdpi.png" density="mdpi" />
-    <icon src="res/icon/android/hdpi.png" density="hdpi" />
-    <icon src="res/icon/android/xhdpi.png" density="xhdpi" />
-    <icon src="res/icon/android/xxhdpi.png" density="xxhdpi" />
-    <icon src="res/icon/android/xxxhdpi.png" density="xxxhdpi" />
-    <splash src="res/screen/android/splash-port-ldpi.png" density="ldpi" />
-    <splash src="res/screen/android/splash-port-mdpi.png" density="mdpi" /> 
-    <splash src="res/screen/android/splash-port-hdpi.png" density="hdpi" /> 
-    <splash src="res/screen/android/splash-port-xhdpi.png" density="xhdpi" /> 
-    <splash src="res/screen/android/splash-port-xxhdpi.png" density="xxhdpi" /> 
-    <splash src="res/screen/android/splash-port-xxxhdpi.png" density="xxxhdpi" /> 
-    <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi" />
-    <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi" />
-    <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi" />
-    <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi" />
-    <splash src="res/screen/android/splash-land-xxhdpi.png" density="land-xxhdpi" />
-    <splash src="res/screen/android/splash-land-xxxhdpi.png" density="land-xxxhdpi" />
+	<preference name="android-targetSdkVersion" value="30" />
+	 <edit-config platform="android" file="AndroidManifest.xml" target="/manifest/application/activity[@android:theme]" mode="merge">
+    <activity android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+    </edit-config>
+    <platform name="android">
+        <icon density="ldpi" src="res/icon/android/ldpi.png" />
+        <icon density="mdpi" src="res/icon/android/mdpi.png" />
+        <icon density="hdpi" src="res/icon/android/hdpi.png" />
+        <icon density="xhdpi" src="res/icon/android/xhdpi.png" />
+        <icon density="xxhdpi" src="res/icon/android/xxhdpi.png" />
+        <icon density="xxxhdpi" src="res/icon/android/xxxhdpi.png" />
+        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi" />
+        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi" />
+        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi" />
+        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi" />
+        <splash src="res/screen/android/splash-port-xxhdpi.png" density="port-xxhdpi" />
+        <splash src="res/screen/android/splash-port-xxxhdpi.png" density="port-xxxhdpi" />
+        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi" />
+        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi" />
+        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi" />
+        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi" />
+        <splash src="res/screen/android/splash-land-xxhdpi.png" density="land-xxhdpi" />
+        <splash src="res/screen/android/splash-land-xxxhdpi.png" density="land-xxxhdpi" />
     </platform>
-	
-	<access origin="mailto:*" launch-external="yes" />
-    
+    <access launch-external="yes" origin="mailto:*" />
+    <content src="index.html" />
 </widget>
