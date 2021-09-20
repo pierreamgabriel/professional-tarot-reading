@@ -4,6 +4,7 @@ var data;
 var spread = 3;
 var UvsR3 = ["upright3", "reversed3"];
 var UvsR5 = ["upright5", "reversed5"];
+var UvsR7 = ["upright7", "reversed7"];
 var controlback = false;
 
 function spreadSetting(value) {
@@ -25,7 +26,7 @@ function thirdScreen(arg) {
   screen.orientation.unlock();
   window.scrollTo(0, 0);
   number = 7;
-  document.getElementById("div-content").innerHTML = '<div><img src="images/instructions.png" style="max-width:150px" /></div><div class="instruction-title" style="color:#447eac">Instructions</div><div class="first-instructions"><p class="item1" style="color:#ffffff">Think about what you want to ask and formulate a clear question. You can say it aloud or just in your mind.</p><p class="item2" style="color:#ffffff">While focusing on your question, press the "Shuffle Cards" button. You should keep your question in your mind till the shuffling is complete.</p><p class="item3" style="color:#ffffff">Three or five cards from the top of the shuffled deck will appear on the screen. The number of cards depends on which spread you are using.</p><button id="1" type="button" class="btn btn-lg" style="background-color: #f57700; color: white" onclick="start()">SHUFFLE CARDS</button></p></div>';
+  document.getElementById("div-content").innerHTML = '<div><img src="images/instructions.png" style="max-width:150px" /></div><div class="instruction-title" style="color:#447eac">Instructions</div><div class="first-instructions"><p class="items" style="color:#ffffff">Think about what you want to ask and formulate a clear question. You can say it aloud or just in your mind.</p><p class="items" style="color:#ffffff">While focusing on your question, press the "Shuffle Cards" button. You should keep your question in your mind till the shuffling is complete.</p><p class="items" style="color:#ffffff">Three, five, or seven cards from the top of the shuffled deck will appear on the screen. The number of cards depends on which spread you are using.</p><button id="1" type="button" class="btn btn-lg" style="background-color: #f57700; color: white" onclick="start()">SHUFFLE CARDS</button></p></div>';
 }
 
 function start() {
@@ -49,10 +50,12 @@ function getData() {
         $('#content').css('min-height', '');
 
         if (parseInt(spread, 10) === 3) {
-          document.getElementById("div-content").innerHTML = '<div id="show-cards"><div class="instruction-title" style="color:#447eac">Results</div><div id="show-cards-top"><p class="item1" style="font-size:calc(15px + 0.5vw);margin-top: 30px;color:#ffffff">This is your three-card spread. The cards from left to right represent the past, present, and future.</p><p class="item2" style="font-size:calc(15px + 0.5vw);color:#ffffff">Click on each card to know its meaning.</p></div><div id="cards"></div><div><button type="button" class="btn btn-lg" style="margin-top: 20px;color:#ffffff;background-color: #f57700;" id="newq" onclick="thirdScreen(this.id);">Ask another question</button></div></div>';
-        } else {
-          document.getElementById("div-content").innerHTML = '<div id="show-cards"><div class="instruction-title" style="color:#447eac">Results</div><div id="show-cards-top"><p class="item1" style="font-size:calc(15px + 0.5vw);margin-top: 30px;color:#ffffff">This is your five-card spread. The cards from left to right represent the past, recent past, present, near future, and future.</p><p class="item2" style="font-size:calc(15px + 0.5vw);color:#ffffff">Click on each card to know its meaning.</p></div><div id="cards"></div><div><button type="button" class="btn btn-lg" style="margin-top: 10px;color:#ffffff;background-color: #f57700;" onclick="thirdScreen();">Ask another question</button></div></div>';
-        }
+          document.getElementById("div-content").innerHTML = '<div id="show-cards"><div class="instruction-title" style="color:#447eac">Results</div><div id="show-cards-top"><p class="items" style="font-size:calc(15px + 0.5vw);margin-top: 30px;color:#ffffff">This is your three-card spread. The cards from left to right represent the past, present, and future.</p><p class="items" style="font-size:calc(15px + 0.5vw);color:#ffffff">Click on each card to know its meaning.</p></div><div id="cards"></div><div><button type="button" class="btn btn-lg" style="margin-top: 20px;color:#ffffff;background-color: #f57700;" id="newq" onclick="thirdScreen(this.id);">Ask another question</button></div></div>';
+        } else if (parseInt(spread, 10) === 5) {
+          document.getElementById("div-content").innerHTML = '<div id="show-cards"><div class="instruction-title" style="color:#447eac">Results</div><div id="show-cards-top"><p class="items" style="font-size:calc(15px + 0.5vw);margin-top: 30px;color:#ffffff">This is your five-card spread. The cards from left to right represent the past, recent past, present, near future, and future.</p><p class="items" style="font-size:calc(15px + 0.5vw);color:#ffffff">Click on each card to know its meaning.</p></div><div id="cards"></div><div><button type="button" class="btn btn-lg" style="margin-top: 10px;color:#ffffff;background-color: #f57700;" onclick="thirdScreen();">Ask another question</button></div></div>';
+        } else if (parseInt(spread, 10) === 7) {
+		  document.getElementById("div-content").innerHTML = '<div id="show-cards"><div class="instruction-title" style="color:#447eac">Results</div><div id="show-cards-top"><p class="items" style="font-size:calc(15px + 0.5vw);margin-top: 30px;color:#ffffff">This is your seven-card spread. The cards from left to right represent the past, present, hidden influences, yourself, the influence of others, what you should do, and the outcome.</p><p class="items" style="font-size:calc(15px + 0.5vw);color:#ffffff">Click on each card to know its meaning.</p></div><div id="cards"></div><div><button type="button" class="btn btn-lg" style="margin-top: 10px;color:#ffffff;background-color: #f57700;" onclick="thirdScreen();">Ask another question</button></div></div>';	
+		}
 
         showCards();
       }, number + [100 + 10]);
@@ -84,20 +87,27 @@ function shuffleCards() {
 
 
 function showCards() {
-  if (spread == "5") {
+	
+  var images;
+	
+  if (spread == "5" || spread == "7") {
     screen.orientation.lock('landscape');
   }
 
   if (reversals === "no") {
     for (var i = 0; i < spread; i++) {
       if (parseInt(spread, 10) === 3) {
-        var images = '<img name="' + data[i]['name'] + ' tarot card meaning" class="upright3" src="' + data[i]['img'] + '" id="' + data[i]['id'] + '1" onclick="googleSearch(this.name)"/>';
+        images = '<img name="' + data[i]['name'] + ' tarot card meaning" class="upright3" src="' + data[i]['img'] + '" id="' + data[i]['id'] + '1" onclick="googleSearch(this.name)"/>';
         $('#cards').append(images);
-      } else {
-        var _images = '<img name="' + data[i]['name'] + ' tarot card meaning" class="upright5" src="' + data[i]['img'] + '" id="' + data[i]['id'] + '1" onclick="googleSearch(this.name)"/>';
+      } else if (parseInt(spread, 10) === 5) {
+        images = '<img name="' + data[i]['name'] + ' tarot card meaning" class="upright5" src="' + data[i]['img'] + '" id="' + data[i]['id'] + '1" onclick="googleSearch(this.name)"/>';
 
-        $('#cards').append(_images);
-      }
+        $('#cards').append(images);
+      } else if (parseInt(spread, 10) === 7) {
+		images = '<img name="' + data[i]['name'] + ' tarot card meaning" class="upright7" src="' + data[i]['img'] + '" id="' + data[i]['id'] + '1" onclick="googleSearch(this.name)"/>';
+
+        $('#cards').append(images);  
+	  }
     }
   } else {
     for (var _i = 0; _i < spread; _i++) {
@@ -109,10 +119,10 @@ function showCards() {
           UpvsRev3 = "reversed ";
         }
 
-        var _images2 = '<img name="' + UpvsRev3 + data[_i]['name'] + ' tarot card meaning" class="' + position3 + '" src="' + data[_i]['img'] + '" id="' + data[_i]['id'] + '1" onclick="googleSearch(this.name)"/>';
+        images = '<img name="' + UpvsRev3 + data[_i]['name'] + ' tarot card meaning" class="' + position3 + '" src="' + data[_i]['img'] + '" id="' + data[_i]['id'] + '1" onclick="googleSearch(this.name)"/>';
 
-        $('#cards').append(_images2);
-      } else {
+        $('#cards').append(images);
+      } else if (parseInt(spread, 10) === 5) {
         var position5 = UvsR5[Math.floor(Math.random() * UvsR5.length)];
         var UpvsRev5 = "";
 
@@ -120,10 +130,21 @@ function showCards() {
           UpvsRev5 = "reversed ";
         }
 
-        var _images3 = '<img name="' + UpvsRev5 + data[_i]['name'] + ' tarot card meaning" class="' + position5 + '" src="' + data[_i]['img'] + '" id="' + data[_i]['id'] + '1" onclick="googleSearch(this.name)"/>';
+        images = '<img name="' + UpvsRev5 + data[_i]['name'] + ' tarot card meaning" class="' + position5 + '" src="' + data[_i]['img'] + '" id="' + data[_i]['id'] + '1" onclick="googleSearch(this.name)"/>';
 
-        $('#cards').append(_images3);
-      }
+        $('#cards').append(images);
+      } else if (parseInt(spread, 10) === 7) {
+		var position7 = UvsR7[Math.floor(Math.random() * UvsR7.length)];
+        var UpvsRev7 = "";
+
+        if (position7 == "reversed7") {
+          UpvsRev7 = "reversed ";
+        }
+
+        images = '<img name="' + UpvsRev7 + data[_i]['name'] + ' tarot card meaning" class="' + position7 + '" src="' + data[_i]['img'] + '" id="' + data[_i]['id'] + '1" onclick="googleSearch(this.name)"/>';
+
+        $('#cards').append(images);  
+	  }
     }
   }
 } 
@@ -157,13 +178,17 @@ function showHelp(arg) {
   }
 } 
 
-//Android back button handler methods
+// Android back button handler methods
 
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-  document.addEventListener("backbutton", backKeyDown, false);
+	
+  document.addEventListener("backbutton", backKeyDown, false);	
+	
+	showAd();
+	
 }
 
 function backKeyDown(answer) {
@@ -192,4 +217,59 @@ function backKeyDown(answer) {
 
 function exitApp() {
   navigator.app.exitApp();
+}
+
+// Google AdMob
+
+document.addEventListener("resume", resumeAd, false);
+
+function showAd() {
+	
+	var ad;
+	
+	if (device.sdk == 22) {
+	
+	var ad = new admob.BannerAd({
+    adUnitId: 'ca-app-pub-6111006882674275/6082824596',
+  })		
+	return ad.show()
+		
+	} else if (device.sdk == 23 || device.sdk == 24) {
+	
+	var ad = new admob.InterstitialAd({
+    adUnitId: 'ca-app-pub-6111006882674275/6192497625',
+  })		
+	return ad.load().then( function() { setTimeout(function(){ ad.show() }, 1000)})	
+		
+	} else if (device.sdk >= 25) {
+		
+	var ad = new admob.AppOpenAd({
+    adUnitId: 'ca-app-pub-6111006882674275/7591540902',
+  })		
+	return ad.load().then( function () { ad.show()})	
+		
+		
+	}
+		 
+		
+	}
+
+function resumeAd() {
+	
+	if (device.sdk == 23 || device.sdk == 24) {
+	
+	var ad = new admob.InterstitialAd({
+    adUnitId: 'ca-app-pub-6111006882674275/6192497625',
+  })		
+	return ad.load().then( function() { setTimeout(function(){ ad.show() }, 1000)})	
+		
+	} else if (device.sdk >= 25) {
+		
+	var ad = new admob.AppOpenAd({
+    adUnitId: 'ca-app-pub-6111006882674275/7591540902',
+  })		
+	return ad.load().then( function () { ad.show()})	
+		
+		
+	}
 }

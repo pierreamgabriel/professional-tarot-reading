@@ -1,12 +1,12 @@
 {
   "name": "professional-tarot-reading",
-  "version": "1.0.0",
-  "scripts": {
-  },
+  "version": "2.0.0",
+  "scripts": {},
   "license": "Proprietary",
   "devDependencies": {
     "@babel/preset-env": "^7.12.16",
-    "cordova-android": "^9.0.0",
+    "cordova-android": "^9.1.0",
+    "cordova-plugin-device": "file:..\\..\\..\\Downloads\\cordova-plugin-device-2.0.3\\cordova-plugin-device-2.0.3",
     "cordova-plugin-inappbrowser": "^4.1.0",
     "cordova-plugin-screen-orientation": "^3.0.2",
     "cordova-plugin-splashscreen": "^6.0.0",
@@ -17,10 +17,18 @@
       "cordova-plugin-whitelist": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-inappbrowser": {},
-      "cordova-plugin-screen-orientation": {}
+      "cordova-plugin-screen-orientation": {},
+      "admob-plus-cordova": {
+        "APP_ID_ANDROID": "ca-app-pub-6111006882674275~8304248540",
+        "PLAY_SERVICES_VERSION": "20.3.0"
+      },
+      "cordova-plugin-device": {}
     },
     "platforms": [
       "android"
     ]
+  },
+  "dependencies": {
+    "admob-plus-cordova": "1.24.0"
   }
 }

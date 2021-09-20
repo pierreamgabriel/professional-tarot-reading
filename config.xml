@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.techstuff.professionaltarotreading" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android">
+<widget id="com.techstuff.professionaltarotreading" android-versionCode="10003" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Professional Tarot Reading</name>
     <plugin name="cordova-plugin-whitelist" spec="~1.3.4" />
     <plugin name="cordova-plugin-splashscreen" spec="~6.0.0" />
@@ -11,6 +11,7 @@
     <preference name="AndroidLaunchMode" value="singleTask" />
     <preference name="SplashScreenDelay" value="5000" />
 	<preference name="android-targetSdkVersion" value="30" />
+	<preference name="AndroidXEnabled" value="true" />
 	 <edit-config platform="android" file="AndroidManifest.xml" target="/manifest/application/activity[@android:theme]" mode="merge">
     <activity android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
     </edit-config>

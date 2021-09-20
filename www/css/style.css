@@ -65,20 +65,10 @@ height: 100%;
 text-align: center; 
 padding-bottom: 40px;    
 }
-.item1 {
+.items {
 background: #029eb1;
 border: 2px solid white;    
 border-radius: 5px;    
-}
-.item2{
-background: #029eb1;
-border: 2px solid white;       
-border-radius: 5px;     
-}
-.item3{
-background: #029eb1;
-border: 2px solid white;       
-border-radius: 5px;     
 }
 .instruction-title {
 font-size: calc(20px + 1.5vw);
@@ -150,7 +140,7 @@ margin-right: 5px;
 display: inline;
 transform: rotate(180deg); 
 }
-.upright5 {
+.upright5, .upright7 {
 width: auto;
 max-width: 18vw;
 min-width: 40px; 
@@ -162,7 +152,7 @@ margin-right: 5px;
 margin-bottom: 3px;    
 display: inline;
 }
-.reversed5 {
+.reversed5, .reversed7 {
 width: auto;
 max-width: 18vw;
 min-width: 40px; 
