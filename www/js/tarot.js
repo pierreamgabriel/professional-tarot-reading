@@ -227,27 +227,19 @@ function showAd() {
 	
 	var ad;
 	
-	if (device.sdk == 22) {
+	if (device.sdk == 22 || device.sdk == 23 || device.sdk == 24) {
 	
 	var ad = new admob.BannerAd({
     adUnitId: 'ca-app-pub-6111006882674275/6082824596',
   })		
 	return ad.show()
 		
-	} else if (device.sdk == 23 || device.sdk == 24) {
-	
-	var ad = new admob.InterstitialAd({
-    adUnitId: 'ca-app-pub-6111006882674275/6192497625',
-  })		
-	return ad.load().then( function() { setTimeout(function(){ ad.show() }, 1000)})	
-		
 	} else if (device.sdk >= 25) {
 		
 	var ad = new admob.AppOpenAd({
     adUnitId: 'ca-app-pub-6111006882674275/7591540902',
   })		
-	return ad.load().then( function () { ad.show()})	
-		
+	return ad.load().then( function () { ad.show()})		
 		
 	}
 		 
@@ -256,14 +248,7 @@ function showAd() {
 
 function resumeAd() {
 	
-	if (device.sdk == 23 || device.sdk == 24) {
-	
-	var ad = new admob.InterstitialAd({
-    adUnitId: 'ca-app-pub-6111006882674275/6192497625',
-  })		
-	return ad.load().then( function() { setTimeout(function(){ ad.show() }, 1000)})	
-		
-	} else if (device.sdk >= 25) {
+	if (device.sdk >= 25) {
 		
 	var ad = new admob.AppOpenAd({
     adUnitId: 'ca-app-pub-6111006882674275/7591540902',
