@@ -18,15 +18,50 @@ function reversed(value) {
 $(document).ready(function () {
   $("#menu").load("components/menu.html");
   $("#warning").load("components/warning.html");
+  createads();	
 }); 
+
+function createads() {
+	
+  var locale = window.navigator.language;	
+	
+  if (locale === "pt-BR" || locale === "pt-PT") {
+	
+	var imgsrc = "images/segredos-da-magia.jpg";  
+	$('#banner').append('<image style="width:100vw" src="' + imgsrc + '" onclick="openlink()">');
+		
+	} else {
+		
+	var imgsrc = "images/the-ultimate-book.jpg"; 
+	$('#banner').append('<image style="width:100vw" src="' + imgsrc + '" onclick="openlink()">');
+		
+	}	
+	
+}
+
+function openlink() {
+
+var locale = window.navigator.language;
+	
+if (locale === "pt-BR" || locale === "pt-PT") {
+	
+	cordova.InAppBrowser.open('https://www.amazon.com.br/dp/B0745S5758', '_system');
+	
+} else {
+	
+	cordova.InAppBrowser.open('https://www.amazon.com/dp/9811133778', '_system');
+	
+}
+	
+}
 
 // Reading starts here
 
 function thirdScreen(arg) {
-  screen.orientation.unlock();
+  //screen.orientation.unlock();
   window.scrollTo(0, 0);
   number = 7;
-  document.getElementById("div-content").innerHTML = '<div><img src="images/instructions.png" style="max-width:150px" /></div><div class="instruction-title" style="color:#447eac">Instructions</div><div class="first-instructions"><p class="items" style="color:#ffffff">Think about what you want to ask and formulate a clear question. You can say it aloud or just in your mind.</p><p class="items" style="color:#ffffff">While focusing on your question, press the "Shuffle Cards" button. You should keep your question in your mind till the shuffling is complete.</p><p class="items" style="color:#ffffff">Three, five, or seven cards from the top of the shuffled deck will appear on the screen. The number of cards depends on which spread you are using.</p><button id="1" type="button" class="btn btn-lg" style="background-color: #f57700; color: white" onclick="start()">SHUFFLE CARDS</button></p></div>';
+  document.getElementById("div-content").innerHTML = '<div><img src="images/instructions.png" style="max-width:150px" /></div><div class="instruction-title" style="color:#447eac">Instructions</div><div class="first-instructions"><p class="items" style="color:#ffffff">Think about what you want to ask and formulate a clear question. You can say it aloud or just in your mind.</p><p class="items" style="color:#ffffff">While focusing on your question, press the "Shuffle Cards" button. You should keep your question in your mind till the shuffling is complete.</p><p class="items" style="color:#ffffff">Three, five, or seven cards from the top of the shuffled deck will appear on the screen. The number of cards depends on which spread you are using.</p><button id="1" type="button" class="btn btn-lg buttons" style="background-color: #f57700; color: white" onclick="start()">SHUFFLE CARDS</button></p></div>';
 }
 
 function start() {
@@ -50,11 +85,11 @@ function getData() {
         $('#content').css('min-height', '');
 
         if (parseInt(spread, 10) === 3) {
-          document.getElementById("div-content").innerHTML = '<div id="show-cards"><div class="instruction-title" style="color:#447eac">Results</div><div id="show-cards-top"><p class="items" style="font-size:calc(15px + 0.5vw);margin-top: 30px;color:#ffffff">This is your three-card spread. The cards from left to right represent the past, present, and future.</p><p class="items" style="font-size:calc(15px + 0.5vw);color:#ffffff">Click on each card to know its meaning.</p></div><div id="cards"></div><div><button type="button" class="btn btn-lg" style="margin-top: 20px;color:#ffffff;background-color: #f57700;" id="newq" onclick="thirdScreen(this.id);">Ask another question</button></div></div>';
+          document.getElementById("div-content").innerHTML = '<div id="show-cards"><div class="instruction-title" style="color:#447eac">Results</div><div id="show-cards-top"><p class="items" style="font-size:calc(15px + 0.5vw);margin-top: 30px;color:#ffffff">This is your three-card spread. The cards from left to right represent the past, present, and future.</p><p class="items" style="font-size:calc(15px + 0.5vw);color:#ffffff">Click on each card to know its meaning.</p></div><div id="cards"></div><div><button type="button" class="btn btn-lg buttons" style="margin-top: 20px;color:#ffffff;background-color: #f57700;" id="newq" onclick="thirdScreen(this.id);">Ask another question</button></div></div>';
         } else if (parseInt(spread, 10) === 5) {
-          document.getElementById("div-content").innerHTML = '<div id="show-cards"><div class="instruction-title" style="color:#447eac">Results</div><div id="show-cards-top"><p class="items" style="font-size:calc(15px + 0.5vw);margin-top: 30px;color:#ffffff">This is your five-card spread. The cards from left to right represent the past, recent past, present, near future, and future.</p><p class="items" style="font-size:calc(15px + 0.5vw);color:#ffffff">Click on each card to know its meaning.</p></div><div id="cards"></div><div><button type="button" class="btn btn-lg" style="margin-top: 10px;color:#ffffff;background-color: #f57700;" onclick="thirdScreen();">Ask another question</button></div></div>';
+          document.getElementById("div-content").innerHTML = '<div id="show-cards"><div class="instruction-title" style="color:#447eac">Results</div><div id="show-cards-top"><p class="items" style="font-size:calc(15px + 0.5vw);margin-top: 30px;color:#ffffff">This is your five-card spread. The cards from left to right represent the past, recent past, present, near future, and future.</p><p class="items" style="font-size:calc(15px + 0.5vw);color:#ffffff">Click on each card to know its meaning.</p></div><div id="cards"></div><div><button type="button" class="btn btn-lg buttons" style="margin-top: 10px;color:#ffffff;background-color: #f57700;" onclick="thirdScreen();">Ask another question</button></div></div>';
         } else if (parseInt(spread, 10) === 7) {
-		  document.getElementById("div-content").innerHTML = '<div id="show-cards"><div class="instruction-title" style="color:#447eac">Results</div><div id="show-cards-top"><p class="items" style="font-size:calc(15px + 0.5vw);margin-top: 30px;color:#ffffff">This is your seven-card spread. The cards from left to right represent the past, present, hidden influences, yourself, the influence of others, what you should do, and the outcome.</p><p class="items" style="font-size:calc(15px + 0.5vw);color:#ffffff">Click on each card to know its meaning.</p></div><div id="cards"></div><div><button type="button" class="btn btn-lg" style="margin-top: 10px;color:#ffffff;background-color: #f57700;" onclick="thirdScreen();">Ask another question</button></div></div>';	
+		  document.getElementById("div-content").innerHTML = '<div id="show-cards"><div class="instruction-title" style="color:#447eac">Results</div><div id="show-cards-top"><p class="items" style="font-size:calc(15px + 0.5vw);margin-top: 30px;color:#ffffff">This is your seven-card spread. The cards from left to right represent the past, present, hidden influences, yourself, the influence of others, what you should do, and the outcome.</p><p class="items" style="font-size:calc(15px + 0.5vw);color:#ffffff">Click on each card to know its meaning.</p></div><div id="cards"></div><div><button type="button" class="btn btn-lg buttons" style="margin-top: 10px;color:#ffffff;background-color: #f57700;" onclick="thirdScreen();">Ask another question</button></div></div>';	
 		}
 
         showCards();
@@ -90,9 +125,9 @@ function showCards() {
 	
   var images;
 	
-  if (spread == "5" || spread == "7") {
+  /* if (spread == "5" || spread == "7") {
     screen.orientation.lock('landscape');
-  }
+  } */
 
   if (reversals === "no") {
     for (var i = 0; i < spread; i++) {
@@ -155,7 +190,7 @@ function showCards() {
 function googleSearch(name) {
   var addPlus = name.replace(/ /g, "+");
   var googleUrl = 'https://www.google.com/search?q=' + addPlus + '+-inurl:pinterest';
-  screen.orientation.unlock();
+  //screen.orientation.unlock();
   cordova.InAppBrowser.open(googleUrl, '_blank', 'location=yes', 'fullscreen=no');
 } 
 
@@ -185,9 +220,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
 	
-  document.addEventListener("backbutton", backKeyDown, false);	
-	
-	showAd();
+  document.addEventListener("backbutton", backKeyDown, false);
+  screen.orientation.lock('portrait');	
 	
 }
 
@@ -217,44 +251,4 @@ function backKeyDown(answer) {
 
 function exitApp() {
   navigator.app.exitApp();
-}
-
-// Google AdMob
-
-document.addEventListener("resume", resumeAd, false);
-
-function showAd() {
-	
-	var ad;
-	
-	if (device.sdk == 22 || device.sdk == 23 || device.sdk == 24) {
-	
-	var ad = new admob.BannerAd({
-    adUnitId: 'ca-app-pub-6111006882674275/6082824596',
-  })		
-	return ad.show()
-		
-	} else if (device.sdk >= 25) {
-		
-	var ad = new admob.AppOpenAd({
-    adUnitId: 'ca-app-pub-6111006882674275/7591540902',
-  })		
-	return ad.load().then( function () { ad.show()})		
-		
-	}
-		 
-		
-	}
-
-function resumeAd() {
-	
-	if (device.sdk >= 25) {
-		
-	var ad = new admob.AppOpenAd({
-    adUnitId: 'ca-app-pub-6111006882674275/7591540902',
-  })		
-	return ad.load().then( function () { ad.show()})	
-		
-		
-	}
 }

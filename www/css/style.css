@@ -38,10 +38,15 @@ display: inline;
 color: #ffffff;   
 text-align: right;
 padding-top: 3px; 
-bottom: 0;
+bottom: 16.8vw;
 margin-bottom: -1px;    
 background: #058be0;  
 position: fixed;    
+}
+#banner {
+bottom: 0;
+padding: 0;
+position: fixed;
 }
 .techstuff {
 font-family: 'Spinnaker', sans-serif;	
@@ -193,4 +198,7 @@ position:relative
 {
 background:url("../images/modalbackground.png");
 z-index:1100; 
+}
+.buttons, .help {
+margin-bottom: 16.8vw;	
 }
