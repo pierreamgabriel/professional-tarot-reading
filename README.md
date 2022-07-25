@@ -1,3 +1,3 @@
 # Professional Tarot Reading 
 
-All rights reserved. You can read the code in this repository, but you cannot use it. If you are interested in the app, get it on Google Play https://play.google.com/store/apps/details?id=com.techstuff.professionaltarotreading.
+Professional Tarot Reading uses the 78 Tarot cards to answer questions just like a traditional reading, but better. Our shuffling algorithm guarantees a completely random shuffling. In other words, it's impossible to know how the cards are mixed or which ones will appear on the screen, and that's what makes this app so special. You can choose between three spread options with three, five, or seven cards, and you can also read reversals. By reading with reversals, you have available 156 cards since reversed cards have different meanings. And last but not least, all images used are from the well-known Rider-Waite deck. In short, this app is everything you need to work with Tarot professionally.
