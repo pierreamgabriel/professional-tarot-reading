@@ -1,11 +1,11 @@
-var reversals = "no";
-var number = 7;
-var data;
-var spread = 3;
-var UvsR3 = ["upright3", "reversed3"];
-var UvsR5 = ["upright5", "reversed5"];
-var UvsR7 = ["upright7", "reversed7"];
-var controlback = false;
+let reversals = "no";
+let number = 7;
+let data;
+let spread = 3;
+let UvsR3 = ["upright3", "reversed3"];
+let UvsR5 = ["upright5", "reversed5"];
+let UvsR7 = ["upright7", "reversed7"];
+let controlback = false;
 
 function spreadSetting(value) {
   spread = value;
@@ -17,43 +17,8 @@ function reversed(value) {
 
 $(document).ready(function () {
   $("#menu").load("components/menu.html");
-  $("#warning").load("components/warning.html");
-  createads();	
+  $("#warning").load("components/warning.html");	
 }); 
-
-function createads() {
-	
-  var locale = window.navigator.language;	
-	
-  if (locale === "pt-BR" || locale === "pt-PT") {
-	
-	var imgsrc = "images/segredos-da-magia.jpg";  
-	$('#banner').append('<image style="width:100vw" src="' + imgsrc + '" onclick="openlink()">');
-		
-	} else {
-		
-	var imgsrc = "images/the-ultimate-book.jpg"; 
-	$('#banner').append('<image style="width:100vw" src="' + imgsrc + '" onclick="openlink()">');
-		
-	}	
-	
-}
-
-function openlink() {
-
-var locale = window.navigator.language;
-	
-if (locale === "pt-BR" || locale === "pt-PT") {
-	
-	cordova.InAppBrowser.open('https://www.amazon.com.br/dp/B0745S5758', '_system');
-	
-} else {
-	
-	cordova.InAppBrowser.open('https://www.amazon.com/dp/9811133778', '_system');
-	
-}
-	
-}
 
 // Reading starts here
 
@@ -99,9 +64,9 @@ function getData() {
 }
 
 function shuffleAlgorithm(array) {
-  for (var i = array.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var _ref = [array[j], array[i]];
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    let _ref = [array[j], array[i]];
     array[i] = _ref[0];
     array[j] = _ref[1];
   }
@@ -123,14 +88,14 @@ function shuffleCards() {
 
 function showCards() {
 	
-  var images;
+  let images;
 	
   /* if (spread == "5" || spread == "7") {
     screen.orientation.lock('landscape');
   } */
 
   if (reversals === "no") {
-    for (var i = 0; i < spread; i++) {
+    for (let i = 0; i < spread; i++) {
       if (parseInt(spread, 10) === 3) {
         images = '<img name="' + data[i]['name'] + ' tarot card meaning" class="upright3" src="' + data[i]['img'] + '" id="' + data[i]['id'] + '1" onclick="googleSearch(this.name)"/>';
         $('#cards').append(images);
@@ -145,10 +110,10 @@ function showCards() {
 	  }
     }
   } else {
-    for (var _i = 0; _i < spread; _i++) {
+    for (let _i = 0; _i < spread; _i++) {
       if (parseInt(spread, 10) === 3) {
-        var position3 = UvsR3[Math.floor(Math.random() * UvsR3.length)];
-        var UpvsRev3 = "";
+        let position3 = UvsR3[Math.floor(Math.random() * UvsR3.length)];
+        let UpvsRev3 = "";
 
         if (position3 == "reversed3") {
           UpvsRev3 = "reversed ";
@@ -158,8 +123,8 @@ function showCards() {
 
         $('#cards').append(images);
       } else if (parseInt(spread, 10) === 5) {
-        var position5 = UvsR5[Math.floor(Math.random() * UvsR5.length)];
-        var UpvsRev5 = "";
+        let position5 = UvsR5[Math.floor(Math.random() * UvsR5.length)];
+        let UpvsRev5 = "";
 
         if (position5 == "reversed5") {
           UpvsRev5 = "reversed ";
@@ -169,8 +134,8 @@ function showCards() {
 
         $('#cards').append(images);
       } else if (parseInt(spread, 10) === 7) {
-		var position7 = UvsR7[Math.floor(Math.random() * UvsR7.length)];
-        var UpvsRev7 = "";
+		let position7 = UvsR7[Math.floor(Math.random() * UvsR7.length)];
+        let UpvsRev7 = "";
 
         if (position7 == "reversed7") {
           UpvsRev7 = "reversed ";
@@ -188,8 +153,8 @@ function showCards() {
 
 
 function googleSearch(name) {
-  var addPlus = name.replace(/ /g, "+");
-  var googleUrl = 'https://www.google.com/search?q=' + addPlus + '+-inurl:pinterest';
+  let addPlus = name.replace(/ /g, "+");
+  let googleUrl = 'https://www.google.com/search?q=' + addPlus + '+-inurl:pinterest';
   //screen.orientation.unlock();
   cordova.InAppBrowser.open(googleUrl, '_blank', 'location=yes', 'fullscreen=no');
 } 
