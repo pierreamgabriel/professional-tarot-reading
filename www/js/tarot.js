@@ -23,7 +23,6 @@ $(document).ready(function () {
 // Reading starts here
 
 function thirdScreen(arg) {
-  //screen.orientation.unlock();
   window.scrollTo(0, 0);
   number = 7;
   document.getElementById("div-content").innerHTML = '<div><img src="images/instructions.png" style="max-width:150px" /></div><div class="instruction-title" style="color:#447eac">Instructions</div><div class="first-instructions"><p class="items" style="color:#ffffff">Think about what you want to ask and formulate a clear question. You can say it aloud or just in your mind.</p><p class="items" style="color:#ffffff">While focusing on your question, press the "Shuffle Cards" button. You should keep your question in your mind till the shuffling is complete.</p><p class="items" style="color:#ffffff">Three, five, or seven cards from the top of the shuffled deck will appear on the screen. The number of cards depends on which spread you are using.</p><button id="1" type="button" class="btn btn-lg buttons" style="background-color: #f57700; color: white" onclick="start()">SHUFFLE CARDS</button></p></div>';
@@ -89,10 +88,6 @@ function shuffleCards() {
 function showCards() {
 	
   let images;
-	
-  /* if (spread == "5" || spread == "7") {
-    screen.orientation.lock('landscape');
-  } */
 
   if (reversals === "no") {
     for (let i = 0; i < spread; i++) {
@@ -155,7 +150,6 @@ function showCards() {
 function googleSearch(name) {
   let addPlus = name.replace(/ /g, "+");
   let googleUrl = 'https://www.google.com/search?q=' + addPlus + '+-inurl:pinterest';
-  //screen.orientation.unlock();
   cordova.InAppBrowser.open(googleUrl, '_blank', 'location=yes', 'fullscreen=no');
 } 
 
